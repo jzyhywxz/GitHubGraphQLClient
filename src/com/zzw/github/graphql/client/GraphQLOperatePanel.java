@@ -1,5 +1,7 @@
 package com.zzw.github.graphql.client;
 
+import com.zzw.tools.io.OkTextReader;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -11,7 +13,7 @@ import java.io.IOException;
  */
 public class GraphQLOperatePanel extends JPanel {
     private JLabel mAccessTokenLabel = new JLabel(new ImageIcon(getClass().getResource("image/access.png")));
-    private JTextField mAccessTokenField = new JTextField("24c7963d1bea8a280869514fb02e4be0fc95038f");
+    private JTextField mAccessTokenField = new JTextField();
     private JButton mInputButton = new JButton(new ImageIcon(getClass().getResource("image/import.png")));
     private JTextArea mInputArea = new JTextArea();
     private JButton mOutputButton = new JButton(new ImageIcon(getClass().getResource("image/execute.png")));
@@ -27,6 +29,11 @@ public class GraphQLOperatePanel extends JPanel {
         mAccessTokenLabel.setOpaque(true);
         mAccessTokenLabel.setBackground(color);
         mAccessTokenField.setHorizontalAlignment(SwingConstants.LEFT);
+        OkTextReader reader = new OkTextReader();
+        reader.open("F:\\JetBrains\\IntelliJIdea\\access_token.txt");
+        String accessToken = reader.readLine();
+        reader.close();
+        mAccessTokenField.setText(accessToken);
 
         mInputButton.setBorderPainted(false);
         mInputButton.setBackground(color);
