@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="github-graphql-api-1.0.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/github-graphql-api-1.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
