@@ -8,15 +8,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="gson-2.8.2" level="project" />
-    <orderEntry type="library" name="jsoup-1.8.3" level="project" />
     <orderEntry type="library" name="okhttp-3.9.1" level="project" />
     <orderEntry type="library" name="okio-1.13.0" level="project" />
-    <orderEntry type="library" name="slf4j-api-1.7.6" level="project" />
-    <orderEntry type="library" name="slf4j-log4j12-1.7.6" level="project" />
-    <orderEntry type="library" name="webmagic-core-0.7.3" level="project" />
-    <orderEntry type="library" name="webmagic-extension-0.7.3" level="project" />
-    <orderEntry type="library" name="webmagic-saxon-0.7.3" level="project" />
-    <orderEntry type="library" name="xsoup-0.3.1" level="project" />
     <orderEntry type="library" name="convenient-tools-1.0.1" level="project" />
     <orderEntry type="library" name="github-graphql-api-1.0.1" level="project" />
   </component>
