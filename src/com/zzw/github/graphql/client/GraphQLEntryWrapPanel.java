@@ -19,7 +19,7 @@ public class GraphQLEntryWrapPanel extends JPanel {
         schemaTreePanel.addSchemaTreeSelectionListener(nl);
         mTabbedPane.addTab("schema", null, schemaTreePanel, "GitHub GraphQL Schema System");
 
-        SchemaTypePanel queryComponent = new SchemaTypePanel(com.zzw.github.graphql.schema.query.Query.class, true);
+        SchemaTypePanel queryComponent = new SchemaTypePanel(com.zzw.github.graphql.schema.queries.Query.class, true);
         GraphQLNode queryNode = GraphQLNode.asNode("query");
         queryNode.addTag("component", queryComponent);
         GraphQLEntryPanel queryPanel = new GraphQLEntryPanel(queryNode, nl, al);
@@ -27,7 +27,7 @@ public class GraphQLEntryWrapPanel extends JPanel {
         queryComponent.setGraphQLEntryPanel(queryPanel);
         JPanel queryWrapper = new JPanel(new BorderLayout(0, 0));
         queryWrapper.add(new JScrollPane(queryPanel));
-        mTabbedPane.addTab("query", null, queryWrapper, com.zzw.github.graphql.schema.query.Query.class.getName());
+        mTabbedPane.addTab("query", null, queryWrapper, com.zzw.github.graphql.schema.queries.Query.class.getName());
 
         SchemaTypePanel mutationComponent = new SchemaTypePanel(com.zzw.github.graphql.schema.mutations.Mutation.class, true);
         GraphQLNode mutationNode = GraphQLNode.asNode("mutation");

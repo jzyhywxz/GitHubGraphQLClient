@@ -21,7 +21,7 @@ public class GraphQLOperatePanel extends JPanel {
     private NetworkAgent mNetworkAgent = new NetworkAgent();
     private GraphQLEditPanel mGraphQLEditPanel;
 
-    public GraphQLOperatePanel(GraphQLEditPanel graphQLEditPanel) {
+    public GraphQLOperatePanel(GraphQLEditPanel graphQLEditPanel, String accessToken) {
         mGraphQLEditPanel = graphQLEditPanel;
 
         Color color = new Color(0xffeeeeee);
@@ -29,11 +29,9 @@ public class GraphQLOperatePanel extends JPanel {
         mAccessTokenLabel.setOpaque(true);
         mAccessTokenLabel.setBackground(color);
         mAccessTokenField.setHorizontalAlignment(SwingConstants.LEFT);
-        OkTextReader reader = new OkTextReader();
-        reader.open("F:\\JetBrains\\IntelliJIdea\\access_token.txt");
-        String accessToken = reader.readLine();
-        reader.close();
-        mAccessTokenField.setText(accessToken);
+        if (accessToken != null) {
+            mAccessTokenField.setText(accessToken);
+        }
 
         mInputButton.setBorderPainted(false);
         mInputButton.setBackground(color);

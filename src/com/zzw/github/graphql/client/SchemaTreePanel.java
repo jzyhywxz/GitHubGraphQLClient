@@ -1,7 +1,7 @@
 package com.zzw.github.graphql.client;
 
 import com.zzw.github.graphql.builder.PackageUtil;
-import com.zzw.github.graphql.spider.GitHubGraphQLParser;
+import com.zzw.github.graphql.builder.TypeUtil;
 
 import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
@@ -44,14 +44,14 @@ public class SchemaTreePanel extends JPanel {
 
     private void initData() {
         DefaultMutableTreeNode root = new DefaultMutableTreeNode("GitHub GraphQL Schema System");
-        root.add(constructSchemaTree("Query", GitHubGraphQLParser.PACKAGE_PREFIX + "query"));
-        root.add(constructSchemaTree("Mutations", GitHubGraphQLParser.PACKAGE_PREFIX + "mutations"));
-        root.add(constructSchemaTree("Objects", GitHubGraphQLParser.PACKAGE_PREFIX + "objects"));
-        root.add(constructSchemaTree("Interfaces", GitHubGraphQLParser.PACKAGE_PREFIX + "interfaces"));
-        root.add(constructSchemaTree("Enums", GitHubGraphQLParser.PACKAGE_PREFIX + "enums"));
-        root.add(constructSchemaTree("Unions", GitHubGraphQLParser.PACKAGE_PREFIX + "unions"));
-        root.add(constructSchemaTree("Input Objects", GitHubGraphQLParser.PACKAGE_PREFIX + "inputobjects"));
-        root.add(constructSchemaTree("Scalars", GitHubGraphQLParser.PACKAGE_PREFIX + "scalars"));
+        root.add(constructSchemaTree("Query", TypeUtil.PACKAGE_PREFIX + "query"));
+        root.add(constructSchemaTree("Mutations", TypeUtil.PACKAGE_PREFIX + "mutations"));
+        root.add(constructSchemaTree("Objects", TypeUtil.PACKAGE_PREFIX + "objects"));
+        root.add(constructSchemaTree("Interfaces", TypeUtil.PACKAGE_PREFIX + "interfaces"));
+        root.add(constructSchemaTree("Enums", TypeUtil.PACKAGE_PREFIX + "enums"));
+        root.add(constructSchemaTree("Unions", TypeUtil.PACKAGE_PREFIX + "unions"));
+        root.add(constructSchemaTree("Input Objects", TypeUtil.PACKAGE_PREFIX + "inputobjects"));
+        root.add(constructSchemaTree("Scalars", TypeUtil.PACKAGE_PREFIX + "scalars"));
         mSchemaTree = new JTree(root);
     }
 
